@@ -1,0 +1,381 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: #f5f7fa;
+  text-align: center;
+}
+
+.login-card {
+  width: min(100%, 480px);
+  max-width: 480px;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.login-card h1 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #666;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #555;
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #222;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.secondary-button {
+  background: transparent;
+  color: #222;
+  border: 1px solid #777;
+}
+
+.secondary-button:hover {
+  background: #f5f5f5;
+}
+
+.profile-info {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f5f5f5;
+}
+
+.profile-info p {
+  margin: 0.5rem 0;
+}
+
+.profile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.logout-button {
+  background: transparent;
+  color: #222;
+  border: 1px solid #777;
+}
+
+.logout-button:hover {
+  background: #f5f5f5;
+}
+
+.error {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background: #ffebee;
+  color: #c62828;
+}
+
+.success {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border-radius: 6px;
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+.divider span {
+  font-weight: 600;
+}
+
+.create-profile-section {
+  text-align: center;
+}
+
+.create-profile-section p,
+.form-footer p {
+  margin-bottom: 0.75rem;
+  color: #666;
+}
+
+.form-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.form-group small {
+  display: block;
+  margin-top: 0.35rem;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 1rem;
+    align-items: flex-start;
+  }
+
+  .login-card {
+    margin-top: 2rem;
+    padding: 1.5rem;
+  }
+}
+
+/* Admin profile management */
+.danger-button {
+  background: #b42318;
+  color: #fff;
+}
+
+.danger-button:hover:not(:disabled) {
+  background: #8f1d14;
+}
+
+.danger-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* =========================================
+   NIGHT MODE
+========================================= */
+
+.theme-toggle {
+  width: auto;
+  margin: 0 0 1rem auto;
+  display: block;
+  background: #374151;
+  color: #fff;
+}
+
+.theme-toggle:hover {
+  background: #4b5563;
+}
+
+.dark-mode {
+  color-scheme: dark;
+}
+
+.dark-mode body {
+  background: #111827;
+  color: #e5e7eb;
+}
+
+.dark-mode .app {
+  background: #111827;
+}
+
+.dark-mode .login-card {
+  background: #1f2937;
+  color: #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.dark-mode .login-card h1 {
+  color: #f9fafb;
+}
+
+.dark-mode .subtitle,
+.dark-mode .create-profile-section p,
+.dark-mode .form-footer p {
+  color: #9ca3af;
+}
+
+.dark-mode .form-group label {
+  color: #e5e7eb;
+}
+
+.dark-mode .form-group input {
+  background: #111827;
+  color: #f9fafb;
+  border-color: #4b5563;
+}
+
+.dark-mode .form-group input:focus {
+  border-color: #60a5fa;
+}
+
+.dark-mode button {
+  background: #2563eb;
+  color: #fff;
+}
+
+.dark-mode .secondary-button,
+.dark-mode .logout-button {
+  background: #374151;
+  color: #f9fafb;
+  border-color: #6b7280;
+}
+
+.dark-mode .secondary-button:hover,
+.dark-mode .logout-button:hover {
+  background: #4b5563;
+}
+
+.dark-mode .profile-info {
+  background: #111827;
+}
+
+.dark-mode .divider {
+  color: #9ca3af;
+}
+
+.dark-mode .divider::before,
+.dark-mode .divider::after {
+  background: #4b5563;
+}
+
+.dark-mode .error {
+  background: #451a1a;
+  color: #fecaca;
+}
+
+.dark-mode .success {
+  background: #14351f;
+  color: #bbf7d0;
+}
+
+.dark-mode .admin-users {
+  color: #e5e7eb;
+}
+
+.dark-mode .admin-user-card {
+  background: #111827;
+  border-color: #374151;
+}
+
+/* =========================================
+   CENTERED / RESPONSIVE LAYOUT
+========================================= */
+
+.app {
+  margin: 0 auto;
+}
+
+.login-card {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.profile-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.profile-header button {
+  width: auto;
+}
+
+.form-group {
+  text-align: center;
+}
+
+.form-group input {
+  text-align: center;
+}
+
+.profile-info {
+  text-align: center;
+}
+
+.profile-actions {
+  align-items: center;
+}
+
+.profile-actions button {
+  width: min(100%, 100%);
+}
+
+.admin-users,
+.admin-user-card {
+  text-align: center;
+}
+
+.admin-user-card {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 600px) {
+  .app {
+    padding: 1rem;
+    align-items: center;
+  }
+
+  .login-card {
+    margin-top: 0;
+  }
+
+  .profile-header {
+    flex-direction: column;
+  }
+
+  .profile-header button {
+    width: 100%;
+  }
+}
